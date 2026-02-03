@@ -155,10 +155,11 @@ The import process handles errors gracefully:
 
 ## Limitations
 
-- Maximum file size: Depends on server configuration (default Spring Boot multipart file size limit)
-- Excel format: Only .xlsx format is supported (not older .xls format)
-- Character encoding: CSV files should use UTF-8 encoding
-- Header row: Must be present as the first row in both Excel and CSV files
+- **File Size**: For optimal performance, keep Excel files under 1000 rows. For larger portfolios, consider splitting into multiple files or using CSV format which has better memory efficiency
+- **Excel Format**: Only .xlsx format is supported (not older .xls format)
+- **Character Encoding**: CSV files should use UTF-8 encoding
+- **Header Row**: Must be present as the first row in both Excel and CSV files
+- **Maximum Upload Size**: Depends on server configuration (default Spring Boot multipart file size limit is 1MB, can be increased in application.yml)
 
 ## Migration Workflow
 

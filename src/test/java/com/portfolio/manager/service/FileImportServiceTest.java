@@ -197,7 +197,7 @@ class FileImportServiceTest {
         assertThat(result.getSuccessCount()).isEqualTo(1);
         assertThat(result.getFailureCount()).isEqualTo(1);
         assertThat(result.getErrors()).hasSize(1);
-        assertThat(result.getErrors().get(0)).contains("Row 3");
+        assertThat(result.getErrors().get(0)).contains("Row 3").contains("Symbol is required");
         assertThat(result.getImportedAssets()).hasSize(1);
     }
 

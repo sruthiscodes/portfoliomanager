@@ -222,8 +222,8 @@ public class FileImportService {
             case STRING:
                 return cell.getStringCellValue();
             case NUMERIC:
+                // Format numeric values: whole numbers as integers, decimals as-is
                 double numericValue = cell.getNumericCellValue();
-                // If it's a whole number, return without decimal
                 if (numericValue == Math.floor(numericValue)) {
                     return String.valueOf((long) numericValue);
                 }
