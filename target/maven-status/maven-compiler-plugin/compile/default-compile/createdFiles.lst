@@ -1,0 +1,17 @@
+com/portfolio/manager/model/Asset.class
+com/portfolio/manager/repository/AssetRepository.class
+com/portfolio/manager/PortfolioApplication.class
+com/portfolio/manager/dto/PortfolioSummaryDTO$PortfolioSummaryDTOBuilder.class
+com/portfolio/manager/dto/PortfolioSummaryDTO.class
+com/portfolio/manager/service/PriceUpdateService.class
+com/portfolio/manager/dto/AssetDTO$AssetDTOBuilder.class
+com/portfolio/manager/exception/GlobalExceptionHandler.class
+com/portfolio/manager/service/AssetService.class
+com/portfolio/manager/model/AssetType.class
+com/portfolio/manager/controller/DashboardController.class
+com/portfolio/manager/dto/AssetDTO.class
+com/portfolio/manager/exception/GlobalExceptionHandler$ErrorResponse.class
+com/portfolio/manager/controller/AssetController.class
+com/portfolio/manager/service/DashboardService.class
+com/portfolio/manager/exception/ResourceNotFoundException.class
+com/portfolio/manager/model/Asset$AssetBuilder.class
