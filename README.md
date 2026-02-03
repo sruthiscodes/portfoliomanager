@@ -48,7 +48,14 @@ CREATE TABLE assets (
 | GET | `/api/prices/update` | Trigger price refresh |
 
 ## Configuration
-Set environment variables:
+Default database configuration in `application.yml`:
+```yaml
+url: jdbc:mysql://localhost:3306/portfolio
+username: root
+password: password
+```
+
+**To customize:** Edit [src/main/resources/application.yml](src/main/resources/application.yml) or override with environment variables:
 ```bash
 export DB_URL=jdbc:mysql://localhost:3306/portfolio
 export DB_USERNAME=your_username
