@@ -26,6 +26,7 @@ import com.portfolio.manager.exception.GlobalExceptionHandler;
 import com.portfolio.manager.exception.ResourceNotFoundException;
 import com.portfolio.manager.model.AssetType;
 import com.portfolio.manager.service.AssetService;
+import com.portfolio.manager.service.FileImportService;
 
 @WebMvcTest(controllers = AssetController.class)
 @Import(GlobalExceptionHandler.class)
@@ -39,6 +40,9 @@ class AssetControllerTest {
 
     @MockBean
     private AssetService assetService;
+
+    @MockBean
+    private FileImportService fileImportService;
 
     @Test
     void getAssets_success() throws Exception {

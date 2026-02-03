@@ -1,0 +1,8 @@
+Symbol,Name,Type,Quantity,Avg Buy Price,Current Price
+AAPL,Apple Inc,STOCK,100.5,150.25,175.50
+GOOGL,Alphabet Inc,STOCK,50.25,2800.00,2950.75
+MSFT,Microsoft Corporation,STOCK,75.0,250.50,340.25
+BTC,Bitcoin,CRYPTO,2.5,45000.00,62000.00
+TSLA,Tesla Inc,STOCK,30.0,650.00,880.50
+VTI,Vanguard Total Stock Market ETF,ETF,200.0,220.00,245.30
+AGG,iShares Core U.S. Aggregate Bond ETF,BOND,150.0,110.00,108.50

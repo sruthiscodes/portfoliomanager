@@ -6,6 +6,8 @@ Production-grade Spring Boot 3.x backend for portfolio management with layered a
 - Java 17+
 - Spring Boot 3.x (Web, Data JPA, Validation)
 - MySQL
+- Apache POI (Excel parsing)
+- Apache Commons CSV (CSV parsing)
 - Lombok
 - SLF4J + Logback
 - Maven
@@ -44,8 +46,35 @@ CREATE TABLE assets (
 | POST | `/api/assets` | Create new asset |
 | PUT | `/api/assets/{id}` | Update asset |
 | DELETE | `/api/assets/{id}` | Delete asset |
+| **POST** | **`/api/assets/import`** | **Import portfolio from Excel/CSV file** |
 | GET | `/api/dashboard` | Portfolio summary |
 | GET | `/api/prices/update` | Trigger price refresh |
+
+## Portfolio Import Feature
+
+Migrate your existing portfolio from Excel or CSV files! The application supports importing portfolio data from spreadsheets.
+
+**Quick Start:**
+```bash
+curl -X POST http://localhost:8080/api/assets/import \
+  -F "file=@portfolio.xlsx"
+```
+
+**Supported Formats:**
+- Excel (.xlsx)
+- CSV (.csv)
+
+**Required Columns:**
+1. Symbol
+2. Name  
+3. Type (STOCK, BOND, ETF, CRYPTO, CASH)
+4. Quantity
+5. Avg Buy Price
+6. Current Price (optional)
+
+📖 **Full Documentation:** See [docs/IMPORT_GUIDE.md](docs/IMPORT_GUIDE.md) for detailed instructions and examples.
+
+📄 **Templates:** Download sample templates from `docs/templates/` directory.
 
 ## Configuration
 Default database configuration in `application.yml`:
@@ -79,11 +108,13 @@ export DB_PASSWORD=your_password
 ## Testing
 - **AssetServiceTest**: Unit tests with Mockito
 - **AssetControllerTest**: Integration tests with MockMvc
-- 9 tests covering success and failure scenarios
+- **FileImportServiceTest**: Import functionality tests
+- 14 tests covering success and failure scenarios
 - All tests pass without database dependency
 
 ## Key Features
 - ✅ Layered architecture (Controller → Service → Repository)
+- ✅ **Excel/CSV Portfolio Import** - Migrate from spreadsheets
 - ✅ Jakarta Validation for input validation
 - ✅ Global exception handling with structured JSON errors
 - ✅ SLF4J logging at controller and service levels
